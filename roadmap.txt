@@ -1,0 +1,18 @@
+Skiena:
+Cap. 3 (Data Structures) — 3.1 a 3.5 y 3.7 con resolución de colisiones. Complementa a Goodrich desde el lado del criterio, no de la implementación. Sáltate 3.6, 3.8 y 3.9.
+Cap. 7 (Graph Traversal) — completo salvo las war stories 7.3 y 7.4. BFS, DFS, componentes conexas, bicoloración, detección de ciclos y orden topológico. Es el capítulo más rentable del libro para entrevistas.
+Cap. 8, solo tres partes — 8.1 con Prim, Kruskal y Union–Find (aparece muchísimo), 8.3.1 Dijkstra, y sobre todo 8.7 "Design Graphs, Not Algorithms". Esa sección de dos páginas es la idea más valiosa del libro. Fuera flujo en redes y min-cut.
+Cap. 9 (Combinatorial Search) — 9.1 a 9.3. Backtracking, subconjuntos, permutaciones y poda. Sudoku, ajedrez y A* fuera.
+Cap. 10 (Dynamic Programming) — 10.1 a 10.3, 10.5 y 10.9.1–10.9.2. Edit distance y LIS son clásicos de entrevista. Fuera gramáticas y war stories.
+Cap. 5, parcial — 5.1 (incluida one-sided binary search, que casi nadie conoce y resuelve varios problemas) y 5.3–5.4 de recurrencias. Fuera 5.5, 5.7 y 5.9.
+
+Goodrich:
+Cap. 5 — 5.2, 5.3 (arreglo dinámico y amortización) y 5.4. Este es el capítulo que hace que list deje de ser magia.
+Cap. 6 — completo, es corto. Pilas, colas, deques.
+Cap. 7 — solo 7.1 y 7.3, listas ligadas simple y doble. Fuera 7.2 circular, 7.4 el Positional List ADT (es una abstracción del libro, no del oficio), 7.5 y 7.6.
+Cap. 8 — 8.1 a 8.3.2 y 8.4.1 a 8.4.4. La representación con arreglo (8.3.2) es la que necesitas para entender montículos. Fuera 8.4.6 Euler tours y 8.5.
+Cap. 9 — 9.3.1 a 9.3.4 y 9.3.7 (heapq), más 9.4.2 heap-sort. Fuera 9.2.1, 9.5 y el 9.3.6 que viene marcado como opcional.
+Cap. 10 — 10.1 y 10.2 completo, que es tabla hash con funciones, colisiones, factor de carga y rehashing. Es el capítulo más importante del libro para entrevistas. Fuera 10.4 Skip Lists.
+Cap. 11 — solo 11.1, el BST. Todo lo demás fuera: AVL, splay, (2,4) y rojinegros. Es la mitad del capítulo y no aparece en entrevistas de intern.
+Cap. 14 — 14.1, 14.2 (las cuatro representaciones de grafo) y 14.3. Y 14.7.3, Union-Find, que sí vale por sí solo.
+Cap. 13, solo 13.5.1 — tries estándar. "Implementa un Trie" es un clásico de LeetCode.
