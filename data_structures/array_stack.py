@@ -1,9 +1,9 @@
-from exceptions import Empty
+from data_structures.exceptions import Empty
 
 
-class ArrayStack:
+class ArrayStack[T]:
     def __init__(self) -> None:
-        self._data: list[int] = []
+        self._data: list[T] = []
 
     def __len__(self) -> int:
         return len(self._data)
@@ -16,15 +16,15 @@ class ArrayStack:
     def is_empty(self) -> bool:
         return len(self._data) == 0
 
-    def push(self, item: int) -> None:
+    def push(self, item: T) -> None:
         self._data.append(item)
 
-    def top(self) -> int:
+    def top(self) -> T:
         if self.is_empty():
             raise Empty("Stack is empty.")
         return self._data[-1]
 
-    def pop(self) -> int:
+    def pop(self) -> T:
         if self.is_empty():
             raise Empty("Stack is empty.")
         return self._data.pop()

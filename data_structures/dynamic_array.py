@@ -2,7 +2,7 @@ import ctypes
 from typing import Any
 
 
-class DynamicArray():
+class DynamicArray[T]:
     def __init__(self, capacity: int = 10) -> None:
         self._n: int = 0
         self._capacity: int = capacity
@@ -11,11 +11,23 @@ class DynamicArray():
     def __len__(self) -> int:
         return self._n
 
-    def __getitem__(self, index) -> Any:
+    def __getitem__(self, index: int) -> T:
+        if index < 0:
+            index += self._n
+
         if not 0 <= index < self._n:
             raise IndexError("Invalid index.")
 
         return self._array[index]
+
+    def __setitem__(self, index: int, item: T) -> None:
+        if index < 0:
+            index += self._n
+
+        if not 0 <= index < self._n:
+            raise IndexError("Invalid index.")
+
+        self._array[index] = item
 
     def _resize(self, new_capacity: int) -> None:
         new_array: ctypes.Array[Any] = self._make_array(new_capacity)
@@ -30,14 +42,14 @@ class DynamicArray():
     def _make_array(capacity: int) -> ctypes.Array[Any]:
         return (capacity * ctypes.py_object)()
 
-    def append(self, item: Any) -> None:
+    def append(self, item: T) -> None:
         if self._n == self._capacity:
             self._resize(2 * self._capacity)
 
         self._array[self._n] = item
         self._n += 1
 
-    def remove(self, item: Any) -> None:
+    def remove(self, item: T) -> None:
         for index1 in range(self._n):
             if self._array[index1] == item:
                 for index2 in range(index1, self._n - 1):
